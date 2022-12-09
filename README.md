@@ -23,7 +23,7 @@ import { useMountTransition } from 'react-mount-transition';
 Then instantiate the hook within a component with the two required arguments, `duration` and `isShown`.
 
 ```jsx
-const { showTransitionChild, withTransitionStyles } = useMountTransition({
+const { showTransitionElement, withTransitionStyles } = useMountTransition({
     duration: 150, // transition duration in milliseconds (ms)
     isShown: itemIsShown, // boolean toggle for when to render the element
 });
