@@ -59,8 +59,8 @@ export function Sample(itemIsShown: boolean) {
 
 ### Return
 
-| Prop                   | Type                        | Description                                                                                                                                                 |
-| ---------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showTransitionElement  | boolean                     | This is the core prop to handle when and when not to render the transitioning element in the DOM.                                                           |
-| transitionElementAttrs | HTMLAttributes<HTMLElement> | An object of properties returned to the transitioning element. Currently, this handles `inert` values for improved accessibility during element transition. |
-| withTransitionStyles   | boolean                     | This prop determines when the transition styles are to be applied and removed.                                                                              |
+| Prop                   | Type                          | Description                                                                                                                                                 |
+| ---------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| showTransitionElement  | boolean                       | This is the core prop to handle when and when not to render the transitioning element in the DOM.                                                           |
+| transitionElementAttrs | HTMLAttributes\<HTMLElement\> | An object of properties returned to the transitioning element. Currently, this handles `inert` values for improved accessibility during element transition. |
+| withTransitionStyles   | boolean                       | This prop determines when the transition styles are to be applied and removed.                                                                              |
