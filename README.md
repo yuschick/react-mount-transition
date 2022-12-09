@@ -32,8 +32,6 @@ const { showTransitionChild, withTransitionStyles } = useMountTransition({
 The `useMountTransition` hook returns two properties to handle the mounting and transitioning of an element. In practice, these properties all work together to handle when to render and transition an element.
 
 ```tsx
-import styles from './Sample.module.css`;
-
 export function Sample(itemIsShown: boolean) {
     const { showTransitionElement, withTransitionStyles } = useMountTransition({
       duration: 150,
