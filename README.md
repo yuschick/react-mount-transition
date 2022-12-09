@@ -4,6 +4,14 @@ React Mount Transition is a minimal hook that allows an element to be transition
 
 ## How To Use?
 
+```bash
+npm i react-mount-transform
+```
+
+```bash
+yarn add react-mount-transform
+```
+
 The goal of React Mount Transition is to be a minimal hook, both in setup and features.
 
 To get started, import the hook into a project file.
