@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { HTMLAttributes, useEffect, useState } from 'react';
 
 interface MountTransitionProps {
     duration: number;
@@ -8,6 +8,7 @@ interface MountTransitionProps {
 export type MountTransitionHook = {
     showTransitionElement: boolean;
     withTransitionStyles: boolean;
+    transitionElementAttrs: HTMLAttributes<HTMLElement> & { inert?: string };
 };
 
 export const useMountTransition = ({
@@ -33,5 +34,8 @@ export const useMountTransition = ({
     return {
         showTransitionElement: hasTransitionedIn || isShown,
         withTransitionStyles: hasTransitionedIn && isShown,
+        transitionElementAttrs: {
+            inert: !isShown ? 'true' : undefined,
+        },
     };
 };

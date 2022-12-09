@@ -33,14 +33,14 @@ The `useMountTransition` hook returns two properties to handle the mounting and 
 
 ```tsx
 export function Sample(itemIsShown: boolean) {
-    const { showTransitionElement, withTransitionStyles } = useMountTransition({
+    const { showTransitionElement, transitionElementAttrs, withTransitionStyles } = useMountTransition({
       duration: 150,
       isShown: itemIsShown,
     });
 
     return (
       showTransitionElement ? (
-        <div className={withTransitionStyles ? styles.slideIn : ''}>
+        <div className={withTransitionStyles ? styles.slideIn : ''} {...transitionElementAttrs}>
           ...
         </div>
       ) : null;
@@ -59,7 +59,8 @@ export function Sample(itemIsShown: boolean) {
 
 ### Return
 
-| Prop                  | Type    | Description                                                                                       |
-| --------------------- | ------- | ------------------------------------------------------------------------------------------------- |
-| showTransitionElement | boolean | This is the core prop to handle when and when not to render the transitioning element in the DOM. |
-| withTransitionStyles  | boolean | This prop determines when the transition styles are to be applied and removed.                    |
+| Prop                   | Type                        | Description                                                                                                                                                 |
+| ---------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| showTransitionElement  | boolean                     | This is the core prop to handle when and when not to render the transitioning element in the DOM.                                                           |
+| transitionElementAttrs | HTMLAttributes<HTMLElement> | An object of properties returned to the transitioning element. Currently, this handles `inert` values for improved accessibility during element transition. |
+| withTransitionStyles   | boolean                     | This prop determines when the transition styles are to be applied and removed.                                                                              |
