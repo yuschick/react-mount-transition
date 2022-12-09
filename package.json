@@ -1,0 +1,58 @@
+{
+    "name": "react-mount-transition",
+    "version": "0.0.1",
+    "description": "A simple React hook to transition an element in and out on mount.",
+    "author": "Daniel Yuschick <daniel.yuschick@gmail.com>",
+    "license": "MIT",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint --max-warnings 0 --cache",
+        "lint:fix": "yarn lint --fix",
+        "postinstall": "husky install",
+        "prettier": "prettier --check '**/*.{ts,tsx}'",
+        "prettier:fix": "yarn prettier --write"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yuschick/react-mount-transition.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yuschick/react-mount-transition/issues"
+    },
+    "homepage": "https://github.com/yuschick/react-mount-transition#readme",
+    "peerDependencies": {
+        "react": "^18.0.0",
+        "typescript": "^4.9.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.3.0",
+        "@commitlint/config-conventional": "^17.3.0",
+        "@types/react": "^18.0.26",
+        "eslint": "^8.29.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.2",
+        "lint-staged": "^13.1.0",
+        "prettier": "^2.8.1",
+        "react": "^18.2.0",
+        "typescript": "^4.9.4"
+    },
+    "keywords": [
+        "react",
+        "hooks",
+        "transition on mount",
+        "animate on mount",
+        "mount transition",
+        "mount animate",
+        "typescript",
+        "accessibility",
+        "a11y"
+    ],
+    "dependencies": {},
+    "lint-staged": {
+        "*.{ts, tsx, json, css}": [
+            "yarn lint:fix",
+            "yarn prettier:fix"
+        ]
+    }
+}
