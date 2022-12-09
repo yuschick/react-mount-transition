@@ -6,7 +6,7 @@ interface MountTransitionProps {
 }
 
 export type MountTransitionHook = {
-    showTransitionChild: boolean;
+    showTransitionElement: boolean;
     withTransitionStyles: boolean;
 };
 
@@ -31,7 +31,7 @@ export const useMountTransition = ({
     }, [duration, isShown, hasTransitionedIn]);
 
     return {
-        showTransitionChild: hasTransitionedIn || isShown,
+        showTransitionElement: hasTransitionedIn || isShown,
         withTransitionStyles: hasTransitionedIn && isShown,
     };
 };
