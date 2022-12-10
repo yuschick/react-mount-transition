@@ -1,6 +1,6 @@
 {
     "name": "react-mount-transition",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "React hook and component to transition elements in and out on mount.",
     "author": "Daniel Yuschick <daniel.yuschick@gmail.com>",
     "license": "MIT",

@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./assets/react-mount-transition-logo.svg" alt="React Mount Transition logo" />
+<img src="assets/react-mount-transition-logo.svg" alt="React Mount Transition logo" />
 <h1 align="center">React Mount Transition</h1>
 </p>
 
