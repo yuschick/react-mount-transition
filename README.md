@@ -16,7 +16,7 @@ The `react-mount-transition` exposes two utilities:
 
 [`useMountTransition` Hook](#usemounttransition-hook)
 
-[`<MountTransition />` Component](#mounttransition-component)
+[`<MountTransition />` Component](#mounttransition--component)
 
 ---
 
