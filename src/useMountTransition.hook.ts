@@ -1,9 +1,5 @@
 import { HTMLAttributes, useEffect, useState } from 'react';
-
-interface MountTransitionProps {
-    duration: number;
-    isShown: boolean;
-}
+import { MountTransitionProps } from './types';
 
 export type MountTransitionHook = {
     showTransitionElement: boolean;
