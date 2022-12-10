@@ -1,4 +1,7 @@
-# React Mount Transition
+<p align="center">
+<img src="./assets/react-mount-transition-logo.svg" alt="React Mount Transition logo" />
+<h1 align="center">React Mount Transition</h1>
+</p>
 
 React Mount Transition is a minimal library of React utilities that allow an element to be transitioned in and out on mount without needing to already be rendered in the DOM. It is perfect for overlay components such as tooltips, popovers and modals.
 
