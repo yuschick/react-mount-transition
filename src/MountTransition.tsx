@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, useEffect } from 'react';
 import { MountTransitionProps } from './types';
 import { useMountTransition } from './useMountTransition.hook';
 
@@ -21,7 +21,9 @@ export function MountTransition({
             {showTransitionElement
                 ? React.Children.map(children, (child) => {
                       if (React.isValidElement(child)) {
-                          const updatedClassNames = `${child.props.className}${
+                          const updatedClassNames = `${
+                              child?.props?.className
+                          }${
                               withTransitionStyles
                                   ? ' ' + transitionClassName
                                   : ''

@@ -12,6 +12,14 @@ export const useMountTransition = ({
     duration,
 }: MountTransitionProps): MountTransitionHook => {
     const [hasTransitionedIn, setHasTransitionedIn] = useState<boolean>(false);
+    const durValue =
+        typeof duration === 'number'
+            ? duration
+            : Number(
+                  getComputedStyle(document.documentElement)
+                      .getPropertyValue(duration)
+                      .replace(/\D+/g, '')
+              );
 
     useEffect(() => {
         let timeoutId: ReturnType<typeof setTimeout>;
@@ -19,13 +27,13 @@ export const useMountTransition = ({
         if (isShown && !hasTransitionedIn) {
             setHasTransitionedIn(true);
         } else if (!isShown && hasTransitionedIn) {
-            timeoutId = setTimeout(() => setHasTransitionedIn(false), duration);
+            timeoutId = setTimeout(() => setHasTransitionedIn(false), durValue);
         }
 
         return () => {
             clearTimeout(timeoutId);
         };
-    }, [duration, isShown, hasTransitionedIn]);
+    }, [durValue, hasTransitionedIn, isShown]);
 
     return {
         showTransitionElement: hasTransitionedIn || isShown,
