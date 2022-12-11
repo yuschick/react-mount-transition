@@ -17,9 +17,9 @@ yarn add react-mount-transform
 
 The `react-mount-transition` exposes two utilities:
 
-[`useMountTransition` Hook](#usemounttransition-hook)
+## [`useMountTransition` Hook](#usemounttransition-hook)
 
-[`<MountTransition />` Component](#mounttransition--component)
+## [`<MountTransition />` Component](#mounttransition--component)
 
 ---
 
@@ -61,10 +61,10 @@ export function Sample(itemIsShown: boolean) {
 
 ### Arguments
 
-| Prop     | Type    | Description                                                     |
-| -------- | ------- | --------------------------------------------------------------- |
-| duration | number  | The duration of the transition / animation in milliseconds (ms) |
-| isShown  | boolean | The primary on/off value to toggle rendering the element        |
+| Prop     | Type                    | Description                                                                                                         |
+| -------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| duration | number \| `--${string}` | The duration of the transition in milliseconds either as a number or CSS custom property like `--transition-short`. |
+| isShown  | boolean                 | The primary on/off value to toggle rendering the element                                                            |
 
 ### Return
 
@@ -93,7 +93,7 @@ Use the `<MountTransition />` component to wrap the transitioning element, provi
 ```tsx
 return (
     <MountTransition
-        duration={150}
+        duration="--transition-short"
         showPanel={itemIsShown}
         transitionClassName={styles.slideIn}
     >
@@ -104,8 +104,8 @@ return (
 
 ### Arguments
 
-| Prop                | Type    | Description                                                                                                                 |
-| ------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------- |
-| duration            | number  | The duration of the transition / animation in milliseconds (ms)                                                             |
-| isShown             | boolean | The primary on/off value to toggle rendering the element                                                                    |
-| transitionClassName | string  | The class name to toggle when the element is transitioned. This will be appended to any existing classnames of the element. |
+| Prop                | Type                    | Description                                                                                                                 |
+| ------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| duration            | number \| `--${string}` | The duration of the transition in milliseconds either as a number or CSS custom property like `--transition-short`.         |
+| isShown             | boolean                 | The primary on/off value to toggle rendering the element                                                                    |
+| transitionClassName | string                  | The class name to toggle when the element is transitioned. This will be appended to any existing classnames of the element. |

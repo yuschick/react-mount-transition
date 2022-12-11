@@ -1,4 +1,4 @@
 export interface MountTransitionProps {
-    duration: number;
+    duration: number | `--${string}`;
     isShown: boolean;
 }
