@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useEffect } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { MountTransitionProps } from './types';
 import { useMountTransition } from './useMountTransition.hook';
 
